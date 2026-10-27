@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('../fonts/plus-jakarta-sans-latin-wght-normal.woff2') format('woff2-variations');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 7.5rem; }
+  body { @apply bg-surface font-body text-body-md text-on-surface antialiased; }
+  h1, h2, h3, h4 { @apply font-heading text-primary; }
+  a { @apply underline-offset-2; }
+  :focus-visible { outline: 3px solid #0b588b; outline-offset: 2px; border-radius: 4px; }
+}
+
+@layer components {
+  .container-site { @apply max-w-content mx-auto px-margin-mobile md:px-margin; }
+  .section { @apply py-space-xl; }
+  .eyebrow { @apply font-heading text-label-md uppercase tracking-wider text-primary-container; }
+  .card { @apply bg-surface-container-lowest rounded-card border border-primary-container/10 shadow-card; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 font-heading text-label-lg transition-colors duration-200 no-underline; }
+  .btn-primary { @apply btn bg-primary-container text-on-primary hover:bg-primary-hover; }
+  .btn-secondary { @apply btn border-[1.5px] border-primary-container text-primary-container hover:bg-mist; }
+  .btn-light { @apply btn bg-white text-primary hover:bg-mist; }
+  .chip { @apply inline-flex items-center rounded-full px-3 py-1 font-heading text-label-sm; }
+  .chip-green { @apply chip bg-brand-green/15 text-green-ink border border-brand-green/60; }
+  .chip-mist { @apply chip bg-mist text-primary-container; }
+  .link { @apply text-primary-container font-semibold hover:underline; }
+  .label { @apply block font-heading text-label-sm uppercase tracking-wider text-outline; }
+  .prose-site p { @apply mb-4; }
+  .list-dots { @apply list-disc pl-5 space-y-2 marker:text-primary-container; }
+
+  /* Form fields */
+  .field { @apply block w-full min-h-[48px] rounded-lg border border-[#cfd8dc] bg-white px-4 py-3 text-body-md text-on-surface;
+           @apply focus:border-primary-container focus:outline-none focus:ring-[3px] focus:ring-primary-container/15; }
+
+  /* Hero slideshow: three photos cross-fade; a panel covers the slogan baked into each photo */
+  .hero-frame { container-type: inline-size; aspect-ratio: 960 / 580; }
+  .hero-slide { @apply absolute inset-0 opacity-0 transition-opacity duration-1000; }
+  .hero-slide.is-active { @apply opacity-100; }
+  .hero-cover { @apply absolute flex items-center bg-primary-container text-white font-heading font-bold leading-tight;
+                font-size: 4.4cqw; padding: 0 3.2cqw; }
+  .hero-cover-1 { left: 0; top: 0; width: 50%; height: 46%; border-bottom-right-radius: 14px; }
+  .hero-cover-2 { left: 0; top: 7%; width: 52%; height: 46%; border-radius: 0 14px 14px 0; }
+  .hero-cover-3 { right: 0; top: 2%; width: 30%; height: 43%; border-radius: 14px 0 0 14px; font-size: 3.6cqw; }
+
+  /* FAQ accordion (native <details>) */
+  .faq-item summary { @apply flex cursor-pointer list-none items-center justify-between gap-4 p-space-md font-heading text-title-md text-on-surface; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary .faq-toggle { @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-container text-primary-container text-xl leading-none; }
+  .faq-item summary .faq-toggle::before { content: '+'; }
+  .faq-item[open] summary .faq-toggle::before { content: '\2212'; }
+}
+
+/* Review mode: open any page with #review to outline copy that needs clinic approval. */
+html.review-mode [data-review] { outline: 2px dashed #d97706; outline-offset: 4px; background-color: rgb(253 241 220 / 0.6); }
+html.review-mode [data-review]:hover::after {
+  content: 'Needs approval: ' attr(data-review);
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100;
+  background: #7a4a00; color: #fff; padding: 10px 14px; border-radius: 10px;
+  font: 600 14px/1.4 system-ui, sans-serif;
+}
+.review-banner { display: none; }
+html.review-mode .review-banner { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-slide { transition: none; }
+}

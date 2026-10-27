@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CPAP Fit">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="https://cpapfit.ca/img/og-image.jpg">
+<meta property="og:locale" content="en_CA">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v={{v}}">
+{{turnstile_script}}
+</head>
+<body>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow-lift">Skip to content</a>
+<div class="review-banner fixed inset-x-0 top-0 z-[70] bg-warn-ink px-4 py-2 text-center font-heading text-label-md text-white">Review mode: dashed outlines mark text that needs clinic approval. Hover or tap one to see why.</div>
+{{preview_banner}}
+{{header}}
+<main id="main">
+{{content}}
+</main>
+{{footer}}
+<script src="js/site.js?v={{v}}" defer></script>
+</body>
+</html>
