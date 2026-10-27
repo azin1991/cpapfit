@@ -1,6 +1,6 @@
 # cpapfit.ca: project rules
 
-Redesign of the CPAP Fit clinic website. Source in `src/`, built into `site/` by `npm run build`.
+Redesign of the CPAP Fit clinic website. Source in `src/` (this repo lives at `cpapfit website planning/source/`). `npm run build` writes the production site into `../../cpapfit.ca/`, which is the **upload-only folder**: only files that go to the hosting server, nothing else. `PREVIEW=1 npm run build` writes the GitHub Pages preview into `site/`.
 
 ## Page-by-page workflow (mandatory)
 1. Build **one page at a time**, in this order: Home (`index`) → Rental Trials (`freetrial`) → About OSA (`osa`) → Already Using CPAP? (`already_using`) → FAQ (`faq`) → Contact (`contact`) → Privacy (`privacy`) → 404 (`404`).
@@ -9,8 +9,8 @@ Redesign of the CPAP Fit clinic website. Source in `src/`, built into `site/` by
 4. Shared header/footer/layout changes are allowed at any time but must be noted in `REVIEW.md`, since they affect pages already approved.
 
 ## Content rules
-- Source of truth for copy: the original site text in `../cpapfit website planning/stitch-prompts.md` plus agreed changes: **rental trials** (not loaner/free trials), **no office hours anywhere**, **embedded Google Maps** (not map images), **few icons** (functional only: menu, accordion, media), Chinese version later.
-- Stitch design: `../cpapfit website planning/stitch_cpap_fit_website_refresh/<page>/screen.png` (layout reference only; its code is not reused).
+- Source of truth for copy: the original site text in `../stitch-prompts.md` plus agreed changes: **rental trials** (not loaner/free trials), **no office hours anywhere**, **embedded Google Maps** (not map images), **few icons** (functional only: menu, accordion, media), Chinese version later.
+- Stitch design: `../stitch_cpap_fit_website_refresh/<page>/screen.png` (layout reference only; its code is not reused).
 - Remove Stitch's unverifiable claims (percentages, patient counts, star ratings, "verified", "accredited", "hospital-grade", "whisper-quiet", eligibility badges, invented pages/links).
 - Useful extras that are not original copy stay, marked `data-review="why it needs approval"` and listed in `REVIEW.md`. Open any page with `#review` to see them outlined.
 
@@ -19,7 +19,8 @@ Redesign of the CPAP Fit clinic website. Source in `src/`, built into `site/` by
 - Relative links only (the preview runs under a GitHub Pages sub-path).
 - Images: WebP in `src/img/`, with `width`/`height` and meaningful `alt`. Non-hero images `loading="lazy"`.
 - No external CDNs except Google Maps embeds, YouTube (`youtube-nocookie.com`) and, later, the form CAPTCHA.
-- Preview builds (`PREVIEW=1`) are noindex and fill unbuilt pages with placeholders; production builds fail if any page is missing.
+- Preview builds (`PREVIEW=1`) are noindex and fill unbuilt pages with placeholders; production builds skip missing pages and write `NOT-READY-TO-UPLOAD.txt` into `cpapfit.ca/` (`npm run zip` refuses while it exists).
+- Hero: the three original licensed photos (white bars trimmed), slogan "Get more out of your sleep" is baked into each photo; no cover panel. The Chinese version reuses the same images.
 
 ## Never commit (public repo)
 The planning folder, the server backup, `server-audit.md`, `contact-config.php` or any secret.

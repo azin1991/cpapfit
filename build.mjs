@@ -1,7 +1,8 @@
-// Builds the static site into site/ (the folder that gets uploaded to httpdocs).
+// Production build: writes the upload-ready site into ../../cpapfit.ca (the hosting folder).
 // Pages in src/pages are wrapped in src/partials/layout.html with the shared header and footer.
 // PREVIEW=1 builds the GitHub Pages preview: noindex, a preview banner, and placeholders for unbuilt pages.
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync } from 'node:fs';
+import { resolve, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 
@@ -21,16 +22,15 @@ const PAGES = [
   { file: '404.html', title: 'Page not found', nav: '' },
 ];
 
-const OUT = 'site';
+// Preview goes to site/ inside this repo (published by GitHub Actions); production goes to the hosting folder.
+const OUT = PREVIEW ? 'site' : resolve('../../cpapfit.ca');
 const read = (p) => readFileSync(p, 'utf8');
 
 const missing = PAGES.filter((p) => !existsSync(`src/pages/${p.file}`));
-if (missing.length && !PREVIEW) {
-  console.error(`Production build stopped: missing pages ${missing.map((p) => p.file).join(', ')}`);
-  process.exit(1);
-}
-
-rmSync(OUT, { recursive: true, force: true });
+// Clear the output folder's contents (never anything outside it).
+if (!PREVIEW && basename(OUT) !== 'cpapfit.ca') throw new Error(`Refusing to clear unexpected folder ${OUT}`);
+mkdirSync(OUT, { recursive: true });
+for (const entry of readdirSync(OUT)) rmSync(`${OUT}/${entry}`, { recursive: true, force: true });
 mkdirSync(`${OUT}/css`, { recursive: true });
 mkdirSync(`${OUT}/fonts`, { recursive: true });
 
@@ -73,6 +73,8 @@ sitemap: no
 const sitemap = [];
 for (const page of PAGES) {
   const isPlaceholder = !existsSync(`src/pages/${page.file}`);
+  // Production never contains placeholders: unbuilt pages are skipped and the folder is marked not ready.
+  if (isPlaceholder && !PREVIEW) continue;
   const src = isPlaceholder ? placeholder(page) : read(`src/pages/${page.file}`);
   const meta = {};
   const front = src.match(/^<!--([\s\S]*?)-->/);
@@ -115,6 +117,11 @@ writeFileSync(`${OUT}/robots.txt`, PREVIEW
   ? 'User-agent: *\nDisallow: /\n'
   : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 if (PREVIEW) writeFileSync(`${OUT}/.nojekyll`, '');
+if (!PREVIEW && missing.length) {
+  writeFileSync(`${OUT}/NOT-READY-TO-UPLOAD.txt`,
+    `Do not upload yet. These pages are not built: ${missing.map((p) => p.file).join(', ')}\n` +
+    'This file disappears once every page exists.\n');
+}
 
 const built = PAGES.length - missing.length;
-console.log(`Built ${built} page(s)${missing.length ? ` + ${missing.length} placeholder(s)` : ''} into ${OUT}/ (${PREVIEW ? 'preview' : 'production'}, assets v=${version})`);
+console.log(`Built ${built} page(s)${missing.length ? (PREVIEW ? ` + ${missing.length} placeholder(s)` : `, ${missing.length} not built yet (NOT READY TO UPLOAD)`) : ''} into ${OUT} (${PREVIEW ? 'preview' : 'production'}, assets v=${version})`);

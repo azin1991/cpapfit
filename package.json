@@ -2,11 +2,11 @@
   "name": "cpapfit-website",
   "version": "1.0.0",
   "private": true,
-  "description": "cpapfit.ca: static site source. Run `npm run build`, then upload the contents of site/ to httpdocs.",
+  "description": "cpapfit.ca site source. `npm run build` writes the upload-ready site to ../../cpapfit.ca",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "zip": "node build.mjs && cd site && zip -qr ../cpapfit-preview-$(date +%F).zip . -x '.DS_Store' && echo \"Created cpapfit-preview-$(date +%F).zip\""
+    "zip": "node build.mjs && cd ../../cpapfit.ca && if [ -f NOT-READY-TO-UPLOAD.txt ]; then cat NOT-READY-TO-UPLOAD.txt; exit 1; fi && zip -qr \"../cpapfit website planning/cpapfit-upload-$(date +%F).zip\" . -x .DS_Store && echo \"Created cpapfit website planning/cpapfit-upload-$(date +%F).zip\""
   },
   "devDependencies": {
     "@fontsource-variable/inter": "5.2.5",
