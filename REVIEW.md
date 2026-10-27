@@ -33,7 +33,7 @@ Changes to shared parts after a page is approved are listed here with the date.
 | Locations | Fax labels on both clinic cards | Same as footer: confirm the second numbers are fax lines. |
 | About Us | "…visit our CPAP clinic during our business hours…" | Office hours are no longer shown. Keep the phrase or shorten to "visit our CPAP clinic"? |
 | Professional Services | One-line description under each service | New; the old site listed only the service names. |
-| Products | All six products and their type labels | List dates from 2016–2022 (e.g. AirSense 10 has a successor). Confirm current models. |
+| Products | AirFit P10 and DreamWear; type labels on all six | AirSense 11, AirFit F40, AirFit N30i and F&P Solo were updated on 2026-10-27. P10 and DreamWear are still from the old list. Confirm they are still carried, and the type labels. |
 | Brands we carry | DeVilbiss, HDM, Philips logos | Confirm the clinic still carries these brands; official high-resolution logos should replace the small images. |
 
 What changed from the old Home page, for context: "Loaner Trials" is now "Rental Trials"; office hours removed; map images replaced by live Google Maps; the hero uses the original three photos (white side bars trimmed) with their built-in slogan "Get more out of your sleep"; the Chinese version will use the same photos; Stitch's invented claims ("Zero-obligation", "Whisper-quiet", "ADP eligible", "hospital-grade") were left out.
