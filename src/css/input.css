@@ -51,6 +51,14 @@
   .hero-slide { @apply absolute inset-0 opacity-0 transition-opacity duration-1000; }
   .hero-slide.is-active { @apply opacity-100; }
 
+  /* Locations: clinic phone number, shown first and larger.
+     Change the size here; it applies to both clinics. */
+  .location-phone {
+    font-size: 1.75rem;   /* phone number size (1rem = 16px) */
+    @apply font-heading font-semibold leading-tight text-primary-container no-underline hover:underline;
+  }
+  .location-phone-label { @apply self-center; }
+
   /* FAQ accordion (native <details>) */
   .faq-item summary { @apply flex cursor-pointer list-none items-center justify-between gap-4 p-space-md font-heading text-title-md text-on-surface; }
   .faq-item summary::-webkit-details-marker { display: none; }
