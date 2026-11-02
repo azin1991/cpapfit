@@ -26,6 +26,7 @@ Status values: Not started · Sent for review · Changes requested · Approved.
 Changes to shared parts after a page is approved are listed here with the date.
 
 - 2026-11-02: review mode (`#review`) now only outlines flagged items; it no longer tints their background.
+- 2026-11-02: browser-tab icon (favicon) redrawn to match the old site: logo mark on a transparent background, no white frame.
 
 ## 1. Home: flagged items (v1), all approved 2026-11-02
 
