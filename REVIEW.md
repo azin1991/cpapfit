@@ -5,7 +5,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 
 | # | Page | File | Status | Version |
 |---|---|---|---|---|
-| 1 | Home | `index.html` | Sent for review | v1 |
+| 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
 | 2 | Rental Trials + Testimonials | `freetrial.html` | Not started | |
 | 3 | About OSA | `osa.html` | Not started | |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
