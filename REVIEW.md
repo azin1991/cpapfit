@@ -7,7 +7,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 |---|---|---|---|---|
 | 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
 | 2 | Rental Trials + Testimonials | `freetrial.html` | Not started | |
-| 3 | About OSA | `osa.html` | Changes requested | v2 |
+| 3 | About OSA | `osa.html` | Sent for review | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
 | 5 | FAQ | `faq.html` | Not started | |
 | 6 | Contact | `contact.html` | Not started | |
@@ -45,7 +45,7 @@ What changed from the old Home page, for context: "Loaner Trials" is now "Rental
 
 | Section | Item | Status |
 |---|---|---|
-| Intro | Airway diagram | Open. A new diagram is being drawn; it goes on the site only after it is reviewed. The old image stays until then. |
+| Intro | Airway diagram | v2: replaced with two images chosen on 2026-11-02, "Normal breathing" and "Obstructed breathing" (180 px each, shown at up to 220 px). The redrawn vector diagram was not used. |
 | How is OSA diagnosed? | 3-step summary: Family doctor → Sleep study → Treatment | Approved v1 (2026-11-02). |
 | Bottom | Closing call to action with "Start a rental trial" and "Contact us" | Approved v1 with change: keep the dark blue background readable. In v1 the review highlight tinted it pale yellow behind white text; fixed in v2. |
 
