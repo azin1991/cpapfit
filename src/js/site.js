@@ -31,10 +31,62 @@ if (slides.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches
   }, 6000);
 }
 
-// FAQ: one answer open at a time (for browsers without <details name> support)
-document.querySelectorAll('details.faq-item').forEach((item, _, all) => {
-  item.addEventListener('toggle', () => {
-    if (item.open) all.forEach((other) => { if (other !== item) other.open = false; });
+// FAQ: smooth open/close, one answer open at a time, and the opened
+// question scrolls smoothly to just below the sticky header.
+const faqItems = [...document.querySelectorAll('details.faq-item')];
+const faqReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function faqClosedHeight(item) {
+  return item.querySelector('summary').offsetHeight + (item.offsetHeight - item.clientHeight);
+}
+
+function faqAnimate(item, from, to, done) {
+  if (item.faqAnim) item.faqAnim.cancel();
+  item.style.overflow = 'hidden';
+  item.faqAnim = item.animate(
+    { height: [`${from}px`, `${to}px`] },
+    { duration: faqReduceMotion ? 0 : 350, easing: 'cubic-bezier(.4, 0, .2, 1)' },
+  );
+  item.faqAnim.onfinish = () => {
+    item.style.overflow = '';
+    item.faqAnim = null;
+    if (done) done();
+  };
+}
+
+function faqClose(item) {
+  const from = item.offsetHeight;
+  item.classList.add('is-closing');
+  faqAnimate(item, from, faqClosedHeight(item), () => {
+    item.open = false;
+    item.classList.remove('is-closing');
+  });
+}
+
+function faqOpen(item) {
+  const others = faqItems.filter((o) => o !== item && o.open && !o.classList.contains('is-closing'));
+  // Answers closing above this question move it up; scroll to where it will end up.
+  let shift = 0;
+  others.forEach((o) => {
+    if (o.compareDocumentPosition(item) & Node.DOCUMENT_POSITION_FOLLOWING) shift += o.offsetHeight - faqClosedHeight(o);
+  });
+  others.forEach(faqClose);
+
+  const from = item.offsetHeight;
+  item.classList.remove('is-closing');
+  item.open = true;
+  faqAnimate(item, from, item.scrollHeight + (item.offsetHeight - item.clientHeight));
+
+  const header = document.querySelector('header');
+  const top = item.getBoundingClientRect().top + window.scrollY - shift - (header ? header.offsetHeight : 0) - 16;
+  window.scrollTo({ top: Math.max(0, top), behavior: faqReduceMotion ? 'auto' : 'smooth' });
+}
+
+faqItems.forEach((item) => {
+  item.querySelector('summary').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (item.open && !item.classList.contains('is-closing')) faqClose(item);
+    else faqOpen(item);
   });
 });
 
