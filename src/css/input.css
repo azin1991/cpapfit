@@ -68,7 +68,7 @@
 }
 
 /* Review mode: open any page with #review to outline copy that needs clinic approval. */
-html.review-mode [data-review] { outline: 2px dashed #d97706; outline-offset: 4px; background-color: rgb(253 241 220 / 0.6); }
+html.review-mode [data-review] { outline: 2px dashed #d97706; outline-offset: 4px; }
 html.review-mode [data-review]:hover::after {
   content: 'Needs approval: ' attr(data-review);
   position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100;

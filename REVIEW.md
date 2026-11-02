@@ -7,7 +7,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 |---|---|---|---|---|
 | 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
 | 2 | Rental Trials + Testimonials | `freetrial.html` | Not started | |
-| 3 | About OSA | `osa.html` | Sent for review | v1 |
+| 3 | About OSA | `osa.html` | Changes requested | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
 | 5 | FAQ | `faq.html` | Not started | |
 | 6 | Contact | `contact.html` | Not started | |
@@ -18,16 +18,18 @@ Status values: Not started · Sent for review · Changes requested · Approved.
 
 ## Shared parts (on every page)
 
-| Item | Needs approval because |
+| Item | Status |
 |---|---|
-| Header language toggle "EN \| 中文" | Chinese version is planned; 中文 is a placeholder until those pages exist. |
-| Footer fax numbers (416) 901-0688 and (905) 597-8827 | The old site lists them without a label. Confirm they are fax lines. |
+| Header language toggle "EN \| 中文" | Approved 2026-11-02: keep the placeholder while the Chinese version is in progress. |
+| Footer fax numbers (416) 901-0688 and (905) 597-8827 | Approved 2026-11-02. |
 
 Changes to shared parts after a page is approved are listed here with the date.
 
-## 1. Home: flagged items (v1)
+- 2026-11-02: review mode (`#review`) now only outlines flagged items; it no longer tints their background.
 
-| Section | Item | Needs approval because |
+## 1. Home: flagged items (v1), all approved 2026-11-02
+
+| Section | Item | Was flagged because |
 |---|---|---|
 | Hero | "Rental trials, mask fitting and CPAP education from registered sleep technologists…" | New summary sentence, built from facts on the old About Us page. |
 | Locations | Fax labels on both clinic cards | Same as footer: confirm the second numbers are fax lines. |
@@ -38,12 +40,12 @@ Changes to shared parts after a page is approved are listed here with the date.
 
 What changed from the old Home page, for context: "Loaner Trials" is now "Rental Trials"; office hours removed; map images replaced by live Google Maps; the hero uses the original three photos (white side bars trimmed) with their built-in slogan "Get more out of your sleep"; the Chinese version will use the same photos; Stitch's invented claims ("Zero-obligation", "Whisper-quiet", "ADP eligible", "hospital-grade") were left out.
 
-## 3. About OSA: flagged items (v1)
+## 3. About OSA: flagged items
 
-| Section | Item | Needs approval because |
+| Section | Item | Status |
 |---|---|---|
-| Intro | Airway diagram | The old 291-pixel image; looks soft on high-resolution screens. A redrawn diagram is recommended. |
-| How is OSA diagnosed? | 3-step summary: Family doctor → Sleep study → Treatment | New visual summary; the short lines under each step come from the page text. |
-| Bottom | "Have questions about CPAP? Talk to one of our educators." with "Start a rental trial" and "Contact us" | New closing call to action, not on the old page. |
+| Intro | Airway diagram | Open. A new diagram is being drawn; it goes on the site only after it is reviewed. The old image stays until then. |
+| How is OSA diagnosed? | 3-step summary: Family doctor → Sleep study → Treatment | Approved v1 (2026-11-02). |
+| Bottom | Closing call to action with "Start a rental trial" and "Contact us" | Approved v1 with change: keep the dark blue background readable. In v1 the review highlight tinted it pale yellow behind white text; fixed in v2. |
 
 What changed from the old page, for context: all text is the original copy, word for word. The "Do you SNORE? TIRED during the day?" banner was an image of text; it is now real text in the same colours, so it can be read by screen readers and translated for the Chinese version. Added an "On this page" menu on desktop. The Rental Trials page is not built yet, so "Start a rental trial" opens a placeholder for now.
