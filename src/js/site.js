@@ -31,6 +31,13 @@ if (slides.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches
   }, 6000);
 }
 
+// FAQ: one answer open at a time (for browsers without <details name> support)
+document.querySelectorAll('details.faq-item').forEach((item, _, all) => {
+  item.addEventListener('toggle', () => {
+    if (item.open) all.forEach((other) => { if (other !== item) other.open = false; });
+  });
+});
+
 // Review mode: add #review to any URL to outline copy that needs clinic approval.
 // Remembered for the browser tab so it stays on while clicking between pages.
 try {
