@@ -9,7 +9,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 2 | Rental Trials + Testimonials | `freetrial.html` | Not started | |
 | 3 | About OSA | `osa.html` | Sent for review | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
-| 5 | FAQ | `faq.html` | Not started | |
+| 5 | FAQ | `faq.html` | Sent for review | v1 |
 | 6 | Contact | `contact.html` | Not started | |
 | 7 | Privacy | `privacy.html` | Not started | |
 | 8 | Page not found | `404.html` | Not started | |
@@ -50,3 +50,13 @@ What changed from the old Home page, for context: "Loaner Trials" is now "Rental
 | Bottom | Closing call to action with "Start a rental trial" and "Contact us" | Approved v1 with change: keep the dark blue background readable. In v1 the review highlight tinted it pale yellow behind white text; fixed in v2. |
 
 What changed from the old page, for context: all text is the original copy, word for word. The "Do you SNORE? TIRED during the day?" banner was an image of text; it is now real text in the same colours, so it can be read by screen readers and translated for the Chinese version. Added an "On this page" menu on desktop. The Rental Trials page is not built yet, so "Start a rental trial" opens a placeholder for now.
+
+## 5. FAQ: flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Why can't I just buy a CPAP mask online? | "advised that you rely" | Typo fixed; the old site said "advised that you to rely". |
+| Why can't I make pressure changes…? | "meet with your sleep physician" | Typo fixed; the old site said "meet with you sleep physician". |
+| Bottom | "Still have questions? Our CPAP educators are happy to help." box with both phone numbers and "Contact us" | New closing box, not on the old page. |
+
+What changed from the old page, for context: all five questions and answers are the original text, word for word apart from the two typo fixes. The first answer is open; the others open with a tap. The pressure warning ("Don't try to change the pressure on your own…") is shown in an amber box. Stitch's invented subtitle and badges ("Accredited Mask Fitting" etc.) were left out. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
