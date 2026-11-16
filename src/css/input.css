@@ -64,9 +64,13 @@
   .faq-item summary::-webkit-details-marker { display: none; }
   /* Toggle: three green bars that turn into an X when the answer is open
      (adapted from Uiverse.io by vinodjangid07) */
-  .faq-toggle { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; width: 40px; height: 40px; flex-shrink: 0; }
-  .faq-toggle .bar { width: 100%; height: 4px; border-radius: 5px; background-color: #8dc435; transition-duration: .3s; }
-  .faq-item[open]:not(.is-closing) .faq-toggle .bar { margin-left: 13px; }
+  .faq-toggle {
+    --faq-toggle-size: 0.7;   /* toggle size: 1 = original 40px, 0.8 = 20% smaller (32px) */
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0;
+    gap: calc(10px * var(--faq-toggle-size)); width: calc(40px * var(--faq-toggle-size)); height: calc(40px * var(--faq-toggle-size));
+  }
+  .faq-toggle .bar { width: 100%; height: calc(4px * var(--faq-toggle-size)); border-radius: 5px; background-color: #8dc435; transition-duration: .3s; }
+  .faq-item[open]:not(.is-closing) .faq-toggle .bar { margin-left: calc(13px * var(--faq-toggle-size)); }
   .faq-item[open]:not(.is-closing) .faq-toggle .bar1 { transform: rotate(45deg); transform-origin: left center; }
   .faq-item[open]:not(.is-closing) .faq-toggle .bar2 { transform: rotate(135deg); transform-origin: center; margin-left: 0; }
   .faq-item[open]:not(.is-closing) .faq-toggle .bar3 { transform: rotate(-45deg); transform-origin: left center; }
