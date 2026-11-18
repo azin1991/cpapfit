@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T23:53:17.385019+00:00",
+  "title": "Design System: CPAP Fit",
+  "extensions": {
+    "colorMeta": {
+      "harbour-navy": {
+        "role": "primary",
+        "displayName": "Harbour Navy",
+        "canonical": "#004069",
+        "tonalRamp": [
+          "#001320",
+          "#002034",
+          "#002d4a",
+          "#00385c",
+          "#40708e",
+          "#80a0b4",
+          "#bfcfda",
+          "#ebf0f3"
+        ]
+      },
+      "clinic-blue": {
+        "role": "primary",
+        "displayName": "Clinic Blue",
+        "canonical": "#0b588b",
+        "tonalRamp": [
+          "#031a2a",
+          "#062c46",
+          "#083e61",
+          "#0a4d7a",
+          "#4882a8",
+          "#85acc5",
+          "#c2d5e2",
+          "#ebf2f6"
+        ]
+      },
+      "clinic-blue-deep": {
+        "role": "primary",
+        "displayName": "Clinic Blue Deep",
+        "canonical": "#08446c",
+        "tonalRamp": [
+          "#021420",
+          "#042236",
+          "#06304c",
+          "#073c5f",
+          "#467391",
+          "#84a2b6",
+          "#c1d0da",
+          "#ebf0f3"
+        ]
+      },
+      "sky-tint": {
+        "role": "primary",
+        "displayName": "Sky Tint",
+        "canonical": "#cfe5ff",
+        "tonalRamp": [
+          "#3e454c",
+          "#687280",
+          "#91a0b2",
+          "#b6cae0",
+          "#dbecff",
+          "#e7f2ff",
+          "#f3f8ff",
+          "#fbfdff"
+        ]
+      },
+      "mist": {
+        "role": "primary",
+        "displayName": "Mist",
+        "canonical": "#e6f2f8",
+        "tonalRamp": [
+          "#45494a",
+          "#73797c",
+          "#a1a9ae",
+          "#cad5da",
+          "#ecf5fa",
+          "#f2f8fc",
+          "#f9fcfd",
+          "#fdfefe"
+        ]
+      },
+      "logo-green": {
+        "role": "secondary",
+        "displayName": "Logo Green",
+        "canonical": "#8dc436",
+        "tonalRamp": [
+          "#2a3b10",
+          "#46621b",
+          "#638926",
+          "#7cac30",
+          "#aad368",
+          "#c6e29a",
+          "#e2f0cd",
+          "#f6faef"
+        ]
+      },
+      "logo-blue": {
+        "role": "secondary",
+        "displayName": "Logo Blue",
+        "canonical": "#0070c0",
+        "tonalRamp": [
+          "#00223a",
+          "#003860",
+          "#004e86",
+          "#0063a9",
+          "#4094d0",
+          "#80b8e0",
+          "#bfdbef",
+          "#ebf4fa"
+        ]
+      },
+      "fern-ink": {
+        "role": "secondary",
+        "displayName": "Fern Ink",
+        "canonical": "#33691e",
+        "tonalRamp": [
+          "#0f2009",
+          "#1a340f",
+          "#244a15",
+          "#2d5c1a",
+          "#668e56",
+          "#99b48e",
+          "#ccdac7",
+          "#eff3ed"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f9f9f6",
+        "tonalRamp": [
+          "#4b4b4a",
+          "#7c7c7b",
+          "#aeaeac",
+          "#dbdbd8",
+          "#fafaf8",
+          "#fcfcfa",
+          "#fefefd",
+          "#fffffe"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#4c4c4c",
+          "#808080",
+          "#b2b2b2",
+          "#e0e0e0",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      },
+      "linen": {
+        "role": "neutral",
+        "displayName": "Linen",
+        "canonical": "#f4f4f1",
+        "tonalRamp": [
+          "#494948",
+          "#7a7a78",
+          "#ababa9",
+          "#d7d7d4",
+          "#f7f7f4",
+          "#fafaf8",
+          "#fcfcfc",
+          "#fefefe"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#eeeeeb",
+        "tonalRamp": [
+          "#474746",
+          "#777776",
+          "#a7a7a4",
+          "#d1d1cf",
+          "#f2f2f0",
+          "#f6f6f5",
+          "#fbfbfa",
+          "#fefefd"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a1c1b",
+        "tonalRamp": [
+          "#080808",
+          "#0d0e0e",
+          "#121413",
+          "#171918",
+          "#535554",
+          "#8c8e8d",
+          "#c6c6c6",
+          "#ededed"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#41474f",
+        "tonalRamp": [
+          "#141518",
+          "#202428",
+          "#2e3237",
+          "#393e46",
+          "#70757b",
+          "#a0a3a7",
+          "#d0d1d3",
+          "#f0f0f1"
+        ]
+      },
+      "pewter": {
+        "role": "neutral",
+        "displayName": "Pewter",
+        "canonical": "#717880",
+        "tonalRamp": [
+          "#222426",
+          "#383c40",
+          "#4f545a",
+          "#636a71",
+          "#949aa0",
+          "#b8bcc0",
+          "#dcdddf",
+          "#f4f4f5"
+        ]
+      },
+      "fog-line": {
+        "role": "neutral",
+        "displayName": "Fog Line",
+        "canonical": "#c1c7d0",
+        "tonalRamp": [
+          "#3a3c3e",
+          "#606468",
+          "#878b92",
+          "#aaafb7",
+          "#d0d5dc",
+          "#e0e3e8",
+          "#f0f1f3",
+          "#fafbfb"
+        ]
+      },
+      "amber-wash": {
+        "role": "status",
+        "displayName": "Amber Wash",
+        "canonical": "#fdf1dc",
+        "tonalRamp": [
+          "#4c4842",
+          "#7e786e",
+          "#b1a99a",
+          "#dfd4c2",
+          "#fef4e5",
+          "#fef8ee",
+          "#fefcf6",
+          "#fffefc"
+        ]
+      },
+      "amber-ink": {
+        "role": "status",
+        "displayName": "Amber Ink",
+        "canonical": "#7a4a00",
+        "tonalRamp": [
+          "#251600",
+          "#3d2500",
+          "#553400",
+          "#6b4100",
+          "#9b7740",
+          "#bca480",
+          "#ded2bf",
+          "#f4f1eb"
+        ]
+      },
+      "alert-red": {
+        "role": "status",
+        "displayName": "Alert Red",
+        "canonical": "#b42318",
+        "tonalRamp": [
+          "#360a07",
+          "#5a120c",
+          "#7e1811",
+          "#9e1f15",
+          "#c75a52",
+          "#da918c",
+          "#ecc8c5",
+          "#f9eded"
+        ]
+      },
+      "alert-wash": {
+        "role": "status",
+        "displayName": "Alert Wash",
+        "canonical": "#fef3f2",
+        "tonalRamp": [
+          "#4c4949",
+          "#7f7a79",
+          "#b2aaa9",
+          "#e0d6d5",
+          "#fef6f5",
+          "#fef9f8",
+          "#fffcfc",
+          "#fffefe"
+        ]
+      },
+      "alert-ink": {
+        "role": "status",
+        "displayName": "Alert Ink",
+        "canonical": "#912018",
+        "tonalRamp": [
+          "#2c0a07",
+          "#48100c",
+          "#661611",
+          "#801c15",
+          "#ac5852",
+          "#c8908c",
+          "#e4c7c5",
+          "#f6eded"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Largest hero statements."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles and main section headings."
+      },
+      "title-lg": {
+        "displayName": "Title",
+        "purpose": "Card headings, FAQ questions, names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text, max 720px wide."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small uppercase labels above values."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 2px 8px -2px rgba(11,88,139,0.05), 0 1px 4px -1px rgba(0,0,0,0.03)",
+        "purpose": "Every card at rest."
+      },
+      {
+        "name": "lift",
+        "value": "0 12px 28px -6px rgba(11,88,139,0.10), 0 4px 12px -2px rgba(0,0,0,0.04)",
+        "purpose": "Raised or hovered cards, sparingly."
+      }
+    ],
+    "motion": [
+      {
+        "name": "accordion",
+        "value": "350ms cubic-bezier(.4,0,.2,1)",
+        "purpose": "FAQ answers sliding open and closed."
+      },
+      {
+        "name": "toggle",
+        "value": "300ms",
+        "purpose": "FAQ bars turning into an X."
+      },
+      {
+        "name": "hero-fade",
+        "value": "1000ms opacity, every 6s",
+        "purpose": "Hero photo cross-fade."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1536px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action, e.g. Call clinic or Start a rental trial.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Call clinic</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;background:#0b588b;color:#fff;padding:14px 24px;border-radius:8px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:16px;font-weight:600;text-decoration:none;transition:background .2s}.ds-btn-primary:hover{background:#08446c}.ds-btn-primary:focus-visible{outline:3px solid #0b588b;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Second action beside a primary, e.g. Get directions.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Get directions</a>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#0b588b;border:1.5px solid #0b588b;padding:14px 24px;border-radius:8px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:16px;font-weight:600;text-decoration:none;transition:background .2s}.ds-btn-secondary:hover{background:#e6f2f8}.ds-btn-secondary:focus-visible{outline:3px solid #0b588b;outline-offset:2px}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Default white container on Paper or Linen.",
+      "html": "<div class=\"ds-card\"><h3>Comprehensive Education</h3><p>Our CPAP educators can help, even if you bought CPAP elsewhere.</p></div>",
+      "css": ".ds-card{background:#fff;border:1px solid rgba(11,88,139,.1);border-radius:14px;box-shadow:0 2px 8px -2px rgba(11,88,139,.05),0 1px 4px -1px rgba(0,0,0,.03);padding:20px;max-width:340px;font-family:'Inter Variable',system-ui,sans-serif;color:#1a1c1b}.ds-card h3{margin:0 0 8px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:20px;color:#004069}.ds-card p{margin:0;font-size:15px;line-height:22px;color:#41474f}"
+    },
+    {
+      "name": "ADP Chip",
+      "kind": "chip",
+      "refersTo": "chip-green",
+      "description": "Badge for the ADP-registered vendor fact.",
+      "html": "<span class=\"ds-chip-green\">ADP-registered vendor</span>",
+      "css": ".ds-chip-green{display:inline-flex;padding:4px 12px;border-radius:9999px;background:rgba(141,196,54,.15);border:1px solid rgba(141,196,54,.6);color:#33691e;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:12px;font-weight:600}"
+    },
+    {
+      "name": "Phone Tile",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Tap-to-call tile with clinic label and number.",
+      "html": "<a class=\"ds-phone\" href=\"tel:4169010348\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span><span class=\"ds-phone-label\">Downtown Toronto</span><span class=\"ds-phone-num\">(416) 901-0348</span></span></a>",
+      "css": ".ds-phone{display:flex;align-items:center;gap:12px;background:#f4f4f1;padding:16px;border-radius:8px;text-decoration:none;color:#0b588b;max-width:300px}.ds-phone:hover{background:#e6f2f8}.ds-phone:focus-visible{outline:3px solid #0b588b;outline-offset:2px}.ds-phone-label{display:block;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#41474f}.ds-phone-num{display:block;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:20px;font-weight:600}"
+    },
+    {
+      "name": "Quote Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Patient testimonial with green quote mark.",
+      "html": "<figure class=\"ds-quote\"><blockquote>The educators were excellent. With their help I was able to choose the right CPAP mask and machine for me.</blockquote><figcaption>William H.</figcaption></figure>",
+      "css": ".ds-quote{position:relative;margin:0;background:#fff;border:1px solid rgba(11,88,139,.1);border-radius:14px;box-shadow:0 2px 8px -2px rgba(11,88,139,.05);padding:48px 20px 20px;max-width:320px}.ds-quote::before{content:\"\\201C\";position:absolute;left:20px;top:4px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:56px;line-height:1;color:#8dc436}.ds-quote blockquote{margin:0;font-family:'Inter Variable',system-ui,sans-serif;font-size:17px;line-height:26px;color:#1a1c1b}.ds-quote figcaption{margin-top:16px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:18px;font-weight:600;color:#004069}"
+    },
+    {
+      "name": "Safety Warning",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Serious safety warning only (FAQ pressure warning).",
+      "html": "<p class=\"ds-alert\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"#b42318\" aria-hidden=\"true\"><path d=\"M10.3 3.9 1.8 18.5A2 2 0 0 0 3.5 21.5h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z\"/><path d=\"M12 9v5\" stroke=\"#fff\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"12\" cy=\"17.5\" r=\"1.3\" fill=\"#fff\"/></svg><span>Don't try to change the pressure on your own - you might make your sleep much worse.</span></p>",
+      "css": ".ds-alert{display:flex;gap:12px;align-items:flex-start;margin:0;max-width:560px;background:#fef3f2;border:2px solid #b42318;border-radius:8px;padding:16px;font-family:'Plus Jakarta Sans Variable',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:26px;color:#912018}.ds-alert svg{flex-shrink:0;margin-top:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Trusted Educator",
+    "overview": "The site teaches before it sells. Visitors are tired, often anxious, newly diagnosed or helping someone who is. The design gets out of the way of understanding: readable text at comfortable widths, numbered steps, plain callouts, and the two clinic phone numbers never more than a tap away.\n\nSurfaces are soft and quiet. White cards with a faint blue-tinted shadow and gently rounded corners sit on a warm off-white page. Deep navy carries headings and the main actions; the logo green appears only in small accents. Nothing flashes, nothing pressures.\n\nCopy is real text, never baked into images (the three licensed hero photos are the one exception), so every page can be translated for the planned Chinese version.",
+    "keyCharacteristics": [
+      "Warm off-white page, white cards, faint blue shadow",
+      "Deep navy headings, clinic-blue actions, green used sparingly",
+      "Plus Jakarta Sans headings, Inter body text",
+      "Reading width capped at 720px; content at 1240px",
+      "Functional icons only (menu, phone, location, warning, accordion)"
+    ],
+    "rules": [
+      {
+        "name": "The Quiet Green Rule",
+        "body": "Logo Green is an accent, never a fill for large areas, buttons or text. If green is on more than a few small marks per screen, it is too much.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Label Rule",
+        "body": "Small text (under 18px) uses Slate or darker. Pewter fails contrast on Linen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Real Text Rule",
+        "body": "Headlines and slogans are HTML text, not images, so they can be read aloud and translated.",
+        "section": "typography"
+      },
+      {
+        "name": "The Faint Shadow Rule",
+        "body": "Shadows only hint at a surface. If a shadow is the first thing you notice, it is too strong.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep both clinic phone numbers one tap away on every page.",
+      "Do cap reading text at 720px and use numbered steps for processes.",
+      "Do use Slate or darker for any text under 18px.",
+      "Do keep every heading and slogan as real text so it can be translated.",
+      "Do honour reduced-motion settings; animations become instant."
+    ],
+    "donts": [
+      "Don't show office hours anywhere.",
+      "Don't add patient counts, star ratings, \"verified\" badges, statistics or other claims the clinic has not confirmed.",
+      "Don't add decorative icons; icons must do a job (menu, phone, location, warning, accordion).",
+      "Don't use Logo Green for buttons, large fills or body text.",
+      "Don't use the red alert style for anything except genuine safety warnings."
+    ]
+  }
+}
