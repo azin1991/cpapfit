@@ -13,7 +13,7 @@ const TURNSTILE_SITE_KEY = '';
 // Every page of the site, in build order.
 const PAGES = [
   { file: 'index.html', title: 'Home', nav: 'home' },
-  { file: 'freetrial.html', title: 'Rental Trials', nav: 'rental' },
+  { file: 'trial.html', title: 'Rental Trials', nav: 'rental' },
   { file: 'osa.html', title: 'About Obstructive Sleep Apnea', nav: 'osa' },
   { file: 'already_using.html', title: 'Already Using CPAP?', nav: 'already' },
   { file: 'faq.html', title: 'Frequently Asked Questions', nav: 'faq' },

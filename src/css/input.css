@@ -59,6 +59,14 @@
   }
   .location-phone-label { @apply self-center; }
 
+  /* Testimonial quote cards; long quotes (data-clamp) show 4 lines with a "Read more" button */
+  .quote-card { @apply card relative flex flex-col p-space-md pt-12; }
+  .quote-card::before { content: '\201C'; @apply absolute left-5 top-1 font-heading text-[56px] leading-none text-brand-green; }
+  .quote-card blockquote { @apply text-body-md text-on-surface; }
+  .quote-card figcaption { @apply mt-auto pt-4 font-heading text-title-md text-primary; }
+  .quote-card blockquote.is-clamped { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .quote-more { @apply link mt-2 self-start text-body-sm; }
+
   /* FAQ accordion (native <details>) */
   .faq-item summary { @apply flex cursor-pointer list-none items-center justify-between gap-4 p-space-md font-heading text-title-md text-on-surface; }
   .faq-item summary::-webkit-details-marker { display: none; }

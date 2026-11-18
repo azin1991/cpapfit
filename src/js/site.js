@@ -90,6 +90,23 @@ faqItems.forEach((item) => {
   });
 });
 
+// Long testimonials: show 4 lines with a "Read more" button (full text without JS)
+document.querySelectorAll('blockquote[data-clamp]').forEach((quote) => {
+  quote.classList.add('is-clamped');
+  if (quote.scrollHeight <= quote.clientHeight + 2) { quote.classList.remove('is-clamped'); return; }
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'quote-more';
+  button.textContent = 'Read more';
+  button.setAttribute('aria-expanded', 'false');
+  button.addEventListener('click', () => {
+    const open = quote.classList.toggle('is-clamped') === false;
+    button.textContent = open ? 'Show less' : 'Read more';
+    button.setAttribute('aria-expanded', String(open));
+  });
+  quote.after(button);
+});
+
 // Review mode: add #review to any URL to outline copy that needs clinic approval.
 // Remembered for the browser tab so it stays on while clicking between pages.
 try {

@@ -3,7 +3,7 @@
 Redesign of the CPAP Fit clinic website. Source in `src/` (this repo lives at `cpapfit website planning/source/`). `npm run build` writes the production site into `../../cpapfit.ca/`, which is the **upload-only folder**: only files that go to the hosting server, nothing else. `PREVIEW=1 npm run build` writes the GitHub Pages preview into `site/`.
 
 ## Page-by-page workflow (mandatory)
-1. Build **one page at a time**, in this order: Home (`index`) → Rental Trials (`freetrial`) → About OSA (`osa`) → Already Using CPAP? (`already_using`) → FAQ (`faq`) → Contact (`contact`) → Privacy (`privacy`) → 404 (`404`).
+1. Build **one page at a time**, in this order: Home (`index`) → Rental Trials (`trial`) → About OSA (`osa`) → Already Using CPAP? (`already_using`) → FAQ (`faq`) → Contact (`contact`) → Privacy (`privacy`) → 404 (`404`).
 2. For each page: write `src/pages/<page>.html` → `npm run build` → screenshots at 1280px and 390px compared with the Stitch screen → update `REVIEW.md` → commit and push → share the preview link.
 3. **Stop after each page.** Do not start the next page until the user relays the manager's approval. Changes requested → new draft version of the same page.
 4. Shared header/footer/layout changes are allowed at any time but must be noted in `REVIEW.md`, since they affect pages already approved.

@@ -6,7 +6,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | # | Page | File | Status | Version |
 |---|---|---|---|---|
 | 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
-| 2 | Rental Trials + Testimonials | `freetrial.html` | Not started | |
+| 2 | Rental Trials + Testimonials | `trial.html` | Sent for review | v1 |
 | 3 | About OSA | `osa.html` | Sent for review | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
 | 5 | FAQ | `faq.html` | Sent for review | v1 |
@@ -26,6 +26,7 @@ Status values: Not started · Sent for review · Changes requested · Approved.
 Changes to shared parts after a page is approved are listed here with the date.
 
 - 2026-11-02: review mode (`#review`) now only outlines flagged items; it no longer tints their background.
+- 2026-11-17: Rental Trials page renamed from `freetrial.html` to `trial.html`; menu, footer and page links updated. The live site will redirect the old address with a 301 in `.htaccess` at launch.
 - 2026-11-03: removed the "Call (416) 901-0348" button from the desktop header; the two clinic call buttons in the phone menu stay.
 - 2026-11-02: browser-tab icon (favicon) redrawn to match the old site: logo mark on a transparent background, no white frame.
 
@@ -61,3 +62,13 @@ What changed from the old page, for context: all text is the original copy, word
 | Bottom | "Still have questions? Our CPAP educators are happy to help." box with both phone numbers and "Contact us" | New closing box, not on the old page. |
 
 What changed from the old page, for context: all five questions and answers are the original text, word for word apart from the two typo fixes. The first answer is open; the others open with a tap, one at a time (opening one closes the others). Answers slide open and closed, and the opened question scrolls smoothly to the top of the screen. Each question has a green three-bar button that turns into an X when open (design from Uiverse.io, chosen 2026-11-02). The pressure warning ("Don't try to change the pressure on your own…") is shown as a red warning box with a warning sign (wording unchanged; restyled 2026-11-02). Stitch's invented subtitle and badges ("Accredited Mask Fitting" etc.) were left out. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
+
+## 2. Rental Trials: flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Natalie H.'s quote | Sentence about a payment plan removed, marked with "…" | No payment plan is offered any more. |
+| Natalie H.'s quote | "you're getting" | Typo fixed; the old site said "your getting". |
+| Sophia B.'s quote | "equipment" | Typo fixed; the old site said "equicpment". |
+
+What changed from the old page, for context: built from the approved content plan. "Loaner" is now "rental"; no trial length, fee or ADP mention. New "How it works" steps. All 9 quotes kept; long quotes show 4 lines with a "Read more" button. The 3 YouTube videos use YouTube's privacy-enhanced mode. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
