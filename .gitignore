@@ -3,3 +3,4 @@ site/
 *.zip
 .DS_Store
 contact-config.php
+.impeccable/hook.cache.json

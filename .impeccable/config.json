@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "site/faq.html"
+        ],
+        "createdAt": "2026-11-18T01:54:32.737Z",
+        "reason": "user requested 2026-11-03: pressure warning restyled as a serious red alert box inside its FAQ answer"
+      }
+    ]
+  }
+}
