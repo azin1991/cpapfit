@@ -38,7 +38,7 @@
   .chip-green { @apply chip bg-brand-green/15 text-green-ink border border-brand-green/60; }
   .chip-mist { @apply chip bg-mist text-primary-container; }
   .link { @apply text-primary-container font-semibold hover:underline; }
-  .label { @apply block font-heading text-label-sm uppercase tracking-wider text-outline; }
+  .label { @apply block font-heading text-label-sm uppercase tracking-wider text-on-surface-variant; }
   .prose-site p { @apply mb-4; }
   .list-dots { @apply list-disc pl-5 space-y-2 marker:text-primary-container; }
 
