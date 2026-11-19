@@ -12,7 +12,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 5 | FAQ | `faq.html` | Approved (2026-11-18) | v1 |
 | 6 | Contact | `contact.html` | Sent for review | v1 |
 | 7 | Privacy | `privacy.html` | Not started | |
-| 8 | Page not found | `404.html` | Not started | |
+| 8 | Page not found | `404.html` | Sent for review | v1 |
 
 Status values: Not started · Sent for review · Changes requested · Approved.
 
@@ -89,3 +89,11 @@ What changed from the old page, for context: the header line "We accept walk in 
 | Below the intro | Three highlights: "Use & care for your mask and machine" · "Discover your machine's features" · "Access your compliance data" | New short phrases taken from the intro text. **Approved 2026-11-18.** |
 
 What changed from the old page, for context: the intro and "Struggling with your CPAP therapy?" text are the original copy, word for word. Added a "Book a consultation" box with both phone numbers and a "Contact us" button. Stitch's invented sections were left out ("What to bring to your consultation" checklist, "ADP Registered Specialists" and "Custom Mask Adjustments" badges, extra descriptions under the highlights).
+
+## 8. Page not found (404): flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Whole page | "Page not found", "Sorry, we couldn't find that page. It may have moved, or the link may be out of date.", Go to Home and Contact us buttons, both phone numbers | New page; the old site had none. It shows when someone opens an address that doesn't exist, for example an old link. Not listed in search results. |
+
+To see it on the preview, open any made-up address, e.g. https://azin1991.github.io/cpapfit/old-page.html

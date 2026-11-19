@@ -93,6 +93,8 @@ for (const page of PAGES) {
 
   const html = layout
     .replace('{{preview_banner}}', previewBanner)
+    // 404 is served at any missing address (e.g. /a/b), so its relative links need a fixed base.
+    .replace('{{base}}', page.file === '404.html' ? `<base href="${PREVIEW ? '/cpapfit/' : '/'}">` : '')
     .replace('{{header}}', pageHeader)
     .replace('{{footer}}', footer)
     .replace('{{content}}', content)
