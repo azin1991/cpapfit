@@ -340,6 +340,10 @@
       "label": {
         "displayName": "Label",
         "purpose": "Small uppercase labels above values."
+      },
+      "label-lg": {
+        "displayName": "Button Label",
+        "purpose": "Button text."
       }
     },
     "shadows": [

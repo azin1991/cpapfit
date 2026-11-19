@@ -69,12 +69,17 @@ typography:
     fontFamily: "Inter Variable, system-ui, sans-serif"
     fontSize: "15px"
     lineHeight: "22px"
+  label-lg:
+    fontFamily: "Plus Jakarta Sans Variable, system-ui, sans-serif"
+    fontSize: "16px"
+    fontWeight: 600
+    lineHeight: "22px"
   label:
     fontFamily: "Plus Jakarta Sans Variable, system-ui, sans-serif"
     fontSize: "12px"
     fontWeight: 600
     lineHeight: "16px"
-    letterSpacing: "0.02em"
+    letterSpacing: "0.05em"
 rounded:
   sm: "4px"
   md: "8px"
@@ -92,7 +97,7 @@ components:
   button-primary:
     backgroundColor: "{colors.clinic-blue}"
     textColor: "{colors.white}"
-    typography: "{typography.title-md}"
+    typography: "{typography.label-lg}"
     rounded: "{rounded.md}"
     padding: "14px 24px"
   button-primary-hover:
