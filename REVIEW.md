@@ -78,9 +78,12 @@ What changed from the old page, for context: built from the approved content pla
 
 ## 6. Contact: flagged items (v1)
 
-No flagged items. A contact form was drafted and removed on 2026-11-18 until the manager decides whether the site should have one (it would need one small PHP file on Webnames; see git commit "Add Contact page (draft v1)" to restore it).
+| Section | Item | Needs approval because |
+|---|---|---|
+| Send us a message | The whole contact form (Name, Email, Phone, Preferred location, Message) | New; the old site had no form. Put back 2026-11-19. Messages will be emailed to the clinic once `contact-submit.php` is written. On the preview the form does not send. |
+| Under the Send button | "Please don't include medical details or health card numbers in this form. We'll contact you to discuss your care." | New text, so patients don't send private health information by email. |
 
-What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page (live Google Maps, phone first, fax, email, Call clinic and Get directions). Stitch's invented line "accredited clinical fitting suites" was left out.
+What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page. Name, Email and Message are required; Phone is optional. Stitch's invented lines were left out.
 
 ## 4. Already Using CPAP?: flagged items (v1)
 
@@ -104,3 +107,4 @@ To see it on the preview, open any made-up address, e.g. https://azin1991.github
 | Section | Item | Needs approval because |
 |---|---|---|
 | Whole page | All text (What this website collects · Maps and videos · Email and phone · Questions) | New page; the old site had none. Written from what the new site actually does: no cookies, analytics or forms of its own; Google Maps on Home and Contact; YouTube (privacy-enhanced mode) on Rental Trials. Please have the clinic check it before launch, and update it if a contact form or analytics is added later. **Approved 2026-11-18.** |
+| Contact form, email and phone | First sentence about the contact form; heading now "Contact form, email and phone"; "through the form or by email" | Added 2026-11-19 because the form is back. |

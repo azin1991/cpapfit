@@ -119,11 +119,15 @@ writeFileSync(`${OUT}/robots.txt`, PREVIEW
   ? 'User-agent: *\nDisallow: /\n'
   : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 if (PREVIEW) writeFileSync(`${OUT}/.nojekyll`, '');
-if (!PREVIEW && missing.length) {
-  writeFileSync(`${OUT}/NOT-READY-TO-UPLOAD.txt`,
-    `Do not upload yet. These pages are not built: ${missing.map((p) => p.file).join(', ')}\n` +
-    'This file disappears once every page exists.\n');
+// The contact form posts to contact-submit.php, so the site isn't ready until that handler exists.
+const formWithoutHandler = existsSync('src/pages/contact.html') && read('src/pages/contact.html').includes('id="contact-form"')
+  && !existsSync('src/static/contact-submit.php');
+if (!PREVIEW && (missing.length || formWithoutHandler)) {
+  writeFileSync(`${OUT}/NOT-READY-TO-UPLOAD.txt`, 'Do not upload yet.\n' +
+    (missing.length ? `These pages are not built: ${missing.map((p) => p.file).join(', ')}\n` : '') +
+    (formWithoutHandler ? 'The contact form has no handler yet: src/static/contact-submit.php is missing.\n' : '') +
+    'This file disappears once these are fixed.\n');
 }
 
 const built = PAGES.length - missing.length;
-console.log(`Built ${built} page(s)${missing.length ? (PREVIEW ? ` + ${missing.length} placeholder(s)` : `, ${missing.length} not built yet (NOT READY TO UPLOAD)`) : ''} into ${OUT} (${PREVIEW ? 'preview' : 'production'}, assets v=${version})`);
+console.log(`Built ${built} page(s)${missing.length ? (PREVIEW ? ` + ${missing.length} placeholder(s)` : `, ${missing.length} not built yet`) : ''}${!PREVIEW && (missing.length || formWithoutHandler) ? ' (NOT READY TO UPLOAD)' : ''} into ${OUT} (${PREVIEW ? 'preview' : 'production'}, assets v=${version})`);

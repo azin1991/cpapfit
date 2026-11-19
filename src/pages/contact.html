@@ -49,3 +49,49 @@ nav: contact
   </div>
 </section>
 
+<!-- Contact form -->
+<section class="section bg-surface-container-low" id="message">
+  <div class="container-site">
+    <div class="card mx-auto max-w-prose p-space-md md:p-space-lg" data-review="New: contact form, not on the old site. Messages go to the clinic by email once the site is live.">
+      <h2 class="text-headline-md">Send us a message</h2>
+      <p class="mt-2 text-body-md text-on-surface-variant">Fields marked <span class="text-[#b42318]" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+      <form id="contact-form" class="mt-space-md" action="contact-submit.php" method="post" novalidate>
+        {{form_note}}
+        <div class="grid gap-space-md">
+          <div>
+            <label class="mb-1.5 block font-heading text-label-md" for="cf-name">Name <span class="text-[#b42318]" aria-hidden="true">*</span></label>
+            <input class="field" id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="grid gap-space-md sm:grid-cols-2">
+            <div>
+              <label class="mb-1.5 block font-heading text-label-md" for="cf-email">Email <span class="text-[#b42318]" aria-hidden="true">*</span></label>
+              <input class="field" id="cf-email" name="email" type="email" autocomplete="email" required maxlength="150">
+            </div>
+            <div>
+              <label class="mb-1.5 block font-heading text-label-md" for="cf-phone">Phone</label>
+              <input class="field" id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+            </div>
+          </div>
+          <div>
+            <label class="mb-1.5 block font-heading text-label-md" for="cf-location">Preferred location</label>
+            <select class="field" id="cf-location" name="location">
+              <option>Downtown Toronto</option>
+              <option>Richmond Hill</option>
+            </select>
+          </div>
+          <div>
+            <label class="mb-1.5 block font-heading text-label-md" for="cf-message">Message <span class="text-[#b42318]" aria-hidden="true">*</span></label>
+            <textarea class="field min-h-[140px]" id="cf-message" name="message" rows="5" required maxlength="3000"></textarea>
+          </div>
+          <!-- Spam trap: hidden from people, bots fill it in -->
+          <div class="hidden" aria-hidden="true"><label for="cf-website">Website</label><input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          {{turnstile}}
+        </div>
+        <button class="btn-primary mt-space-md w-full sm:w-auto" type="submit">Send message</button>
+        <p class="mt-space-sm text-body-sm text-on-surface-variant" data-review="New text, suggested for privacy: asks people not to send medical details by email.">Please don't include medical details or health card numbers in this form. We'll contact you to discuss your care.</p>
+        <p id="form-status" class="hidden" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
