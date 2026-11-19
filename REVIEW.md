@@ -11,7 +11,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 4 | Already Using CPAP? | `already_using.html` | Sent for review | v1 |
 | 5 | FAQ | `faq.html` | Approved (2026-11-18) | v1 |
 | 6 | Contact | `contact.html` | Sent for review | v1 |
-| 7 | Privacy | `privacy.html` | Not started | |
+| 7 | Privacy | `privacy.html` | Sent for review | v1 |
 | 8 | Page not found | `404.html` | Sent for review | v1 |
 
 Status values: Not started · Sent for review · Changes requested · Approved.
@@ -97,3 +97,9 @@ What changed from the old page, for context: the intro and "Struggling with your
 | Whole page | "Page not found", "Sorry, we couldn't find that page. It may have moved, or the link may be out of date.", Go to Home and Contact us buttons, both phone numbers | New page; the old site had none. It shows when someone opens an address that doesn't exist, for example an old link. Not listed in search results. **Approved 2026-11-18.** |
 
 To see it on the preview, open any made-up address, e.g. https://azin1991.github.io/cpapfit/old-page.html
+
+## 7. Privacy: flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Whole page | All text (What this website collects · Maps and videos · Email and phone · Questions) | New page; the old site had none. Written from what the new site actually does: no cookies, analytics or forms of its own; Google Maps on Home and Contact; YouTube (privacy-enhanced mode) on Rental Trials. Please have the clinic check it before launch, and update it if a contact form or analytics is added later. |
