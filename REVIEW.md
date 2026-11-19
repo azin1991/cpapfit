@@ -94,6 +94,6 @@ What changed from the old page, for context: the intro and "Struggling with your
 
 | Section | Item | Needs approval because |
 |---|---|---|
-| Whole page | "Page not found", "Sorry, we couldn't find that page. It may have moved, or the link may be out of date.", Go to Home and Contact us buttons, both phone numbers | New page; the old site had none. It shows when someone opens an address that doesn't exist, for example an old link. Not listed in search results. |
+| Whole page | "Page not found", "Sorry, we couldn't find that page. It may have moved, or the link may be out of date.", Go to Home and Contact us buttons, both phone numbers | New page; the old site had none. It shows when someone opens an address that doesn't exist, for example an old link. Not listed in search results. **Approved 2026-11-18.** |
 
 To see it on the preview, open any made-up address, e.g. https://azin1991.github.io/cpapfit/old-page.html
