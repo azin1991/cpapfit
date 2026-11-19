@@ -8,7 +8,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
 | 2 | Rental Trials + Testimonials | `trial.html` | Approved (2026-11-18) | v1 |
 | 3 | About OSA | `osa.html` | Approved (2026-11-18) | v2 |
-| 4 | Already Using CPAP? | `already_using.html` | Not started | |
+| 4 | Already Using CPAP? | `already_using.html` | Sent for review | v1 |
 | 5 | FAQ | `faq.html` | Approved (2026-11-18) | v1 |
 | 6 | Contact | `contact.html` | Sent for review | v1 |
 | 7 | Privacy | `privacy.html` | Not started | |
@@ -80,3 +80,12 @@ What changed from the old page, for context: built from the approved content pla
 No flagged items. A contact form was drafted and removed on 2026-11-18 until the manager decides whether the site should have one (it would need one small PHP file on Webnames; see git commit "Add Contact page (draft v1)" to restore it).
 
 What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page (live Google Maps, phone first, fax, email, Call clinic and Get directions). Stitch's invented line "accredited clinical fitting suites" was left out.
+
+## 4. Already Using CPAP?: flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Under the photo | "We offer PROFESSIONAL consultations to help you succeed." | This line was text inside the old picture; it is now real text under the photo (wording unchanged), so it can be translated. The photo was cropped to remove the text and the pink circle. |
+| Below the intro | Three highlights: "Use & care for your mask and machine" · "Discover your machine's features" · "Access your compliance data" | New short phrases taken from the intro text. |
+
+What changed from the old page, for context: the intro and "Struggling with your CPAP therapy?" text are the original copy, word for word. Added a "Book a consultation" box with both phone numbers and a "Contact us" button. Stitch's invented sections were left out ("What to bring to your consultation" checklist, "ADP Registered Specialists" and "Custom Mask Adjustments" badges, extra descriptions under the highlights).
