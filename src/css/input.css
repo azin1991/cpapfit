@@ -92,8 +92,6 @@ html.review-mode [data-review]:hover::after {
   background: #7a4a00; color: #fff; padding: 10px 14px; border-radius: 10px;
   font: 600 14px/1.4 system-ui, sans-serif;
 }
-.review-banner { display: none; }
-html.review-mode .review-banner { display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
