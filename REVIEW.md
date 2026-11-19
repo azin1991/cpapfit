@@ -27,6 +27,7 @@ Changes to shared parts after a page is approved are listed here with the date.
 
 - 2026-11-02: review mode (`#review`) now only outlines flagged items; it no longer tints their background.
 - 2026-11-17: small uppercase labels (e.g. "DOWNTOWN TORONTO", "PHONE") are a darker grey so they meet the WCAG AA contrast minimum.
+- 2026-11-19: clinic phone numbers on Home and Contact made smaller (28px to 24px).
 - 2026-11-18: removed the brown "Review mode" bar from the top of the page. `#review` still outlines any flagged text on future pages.
 - 2026-11-17: Rental Trials page renamed from `freetrial.html` to `trial.html`; menu, footer and page links updated. The live site will redirect the old address with a 301 in `.htaccess` at launch.
 - 2026-11-03: removed the "Call (416) 901-0348" button from the desktop header; the two clinic call buttons in the phone menu stay.
