@@ -1,3 +1,6 @@
+// Chinese pages (zh/) get Chinese button and form messages.
+const zh = document.documentElement.lang === 'zh-Hant';
+
 // Mobile menu
 const toggle = document.querySelector('[data-menu-toggle]');
 const mobileNav = document.getElementById('mobile-nav');
@@ -97,11 +100,11 @@ document.querySelectorAll('blockquote[data-clamp]').forEach((quote) => {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'quote-more';
-  button.textContent = 'Read more';
+  button.textContent = zh ? '閱讀全文' : 'Read more';
   button.setAttribute('aria-expanded', 'false');
   button.addEventListener('click', () => {
     const open = quote.classList.toggle('is-clamped') === false;
-    button.textContent = open ? 'Show less' : 'Read more';
+    button.textContent = open ? (zh ? '收起' : 'Show less') : (zh ? '閱讀全文' : 'Read more');
     button.setAttribute('aria-expanded', String(open));
   });
   quote.after(button);
@@ -122,6 +125,9 @@ const form = document.getElementById('contact-form');
 if (form) {
   const status = document.getElementById('form-status');
   const button = form.querySelector('button[type="submit"]');
+  const failText = zh
+    ? '抱歉，您的訊息未能送出。請致電 (416) 901-0348 或 (905) 597-8884 與我們聯絡。'
+    : 'Sorry, your message could not be sent. Please call us at (416) 901-0348 or (905) 597-8884.';
   const show = (ok, text) => {
     status.textContent = text;
     status.className = ok
@@ -132,21 +138,21 @@ if (form) {
     e.preventDefault();
     if (!form.reportValidity()) return;
     button.disabled = true;
-    button.textContent = 'Sending…';
+    button.textContent = zh ? '傳送中…' : 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         form.reset();
-        show(true, 'Thank you. We received your message and will contact you shortly.');
+        show(true, zh ? '謝謝！我們已收到您的訊息，會盡快與您聯絡。' : 'Thank you. We received your message and will contact you shortly.');
       } else {
-        show(false, data.error || 'Sorry, your message could not be sent. Please call us at (416) 901-0348 or (905) 597-8884.');
+        show(false, data.error || failText);
       }
     } catch {
-      show(false, 'Sorry, your message could not be sent. Please call us at (416) 901-0348 or (905) 597-8884.');
+      show(false, failText);
     } finally {
       button.disabled = false;
-      button.textContent = 'Send message';
+      button.textContent = zh ? '傳送訊息' : 'Send message';
       if (window.turnstile) window.turnstile.reset();
     }
   });

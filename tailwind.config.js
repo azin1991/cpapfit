@@ -28,8 +28,8 @@ export default {
         'warn-ink': '#7a4a00',
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans Variable"', 'system-ui', 'sans-serif'],
-        body: ['"Inter Variable"', 'system-ui', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans Variable"', '"PingFang TC"', '"Microsoft JhengHei"', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
+        body: ['"Inter Variable"', '"PingFang TC"', '"Microsoft JhengHei"', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         display: ['44px', { lineHeight: '52px', letterSpacing: '-0.02em', fontWeight: '700' }],

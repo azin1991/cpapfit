@@ -13,6 +13,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 6 | Contact | `contact.html` | Sent for review | v1 |
 | 7 | Privacy | `privacy.html` | Sent for review | v1 |
 | 8 | Page not found | `404.html` | Sent for review | v1 |
+| 9 | Chinese version (all 8 pages) | `zh/*.html` | Sent for review | v1 |
 
 Status values: Not started · Sent for review · Changes requested · Approved.
 
@@ -25,6 +26,8 @@ Status values: Not started · Sent for review · Changes requested · Approved.
 
 Changes to shared parts after a page is approved are listed here with the date.
 
+- 2026-11-19: Chinese (Traditional) version added under `zh/`, built from the approved translation file. "EN | 中文" in the header now links to the same page in the other language and shows on phones too.
+- 2026-11-19: FAQ red warning now starts "DO NOT" (was "Don't").
 - 2026-11-02: review mode (`#review`) now only outlines flagged items; it no longer tints their background.
 - 2026-11-17: small uppercase labels (e.g. "DOWNTOWN TORONTO", "PHONE") are a darker grey so they meet the WCAG AA contrast minimum.
 - 2026-11-19: clinic phone numbers on Home and Contact made smaller (28px to 24px).

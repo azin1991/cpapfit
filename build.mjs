@@ -26,7 +26,12 @@ const PAGES = [
 const OUT = PREVIEW ? 'site' : resolve('../../cpapfit.ca');
 const read = (p) => readFileSync(p, 'utf8');
 
-const missing = PAGES.filter((p) => !existsSync(`src/pages/${p.file}`));
+// English pages live in src/pages, Chinese (Traditional) pages in src/pages/zh and are written to zh/.
+const LANGS = [
+  { code: 'en', html: 'en', locale: 'en_CA', dir: '', skip: 'Skip to content' },
+  { code: 'zh', html: 'zh-Hant', locale: 'zh_HK', dir: 'zh/', skip: '跳至主要內容' },
+];
+const missing = LANGS.flatMap((l) => PAGES.filter((p) => !existsSync(`src/pages/${l.dir}${p.file}`)).map((p) => ({ ...p, file: l.dir + p.file })));
 // Clear the output folder's contents (never anything outside it).
 if (!PREVIEW && basename(OUT) !== 'cpapfit.ca') throw new Error(`Refusing to clear unexpected folder ${OUT}`);
 mkdirSync(OUT, { recursive: true });
@@ -50,8 +55,6 @@ for (const [pkg, file] of [
 
 // Pages
 const layout = read('src/partials/layout.html');
-const header = read('src/partials/header.html');
-const footer = read('src/partials/footer.html');
 const previewBanner = PREVIEW
   ? '<div class="bg-warn-bg px-4 py-2 text-center font-heading text-label-md text-warn-ink">Preview of the new cpapfit.ca for internal review. This is not the live website.</div>'
   : '';
@@ -71,11 +74,15 @@ sitemap: no
 </section>`;
 
 const sitemap = [];
+for (const lang of LANGS) {
+const header = read(`src/partials/${lang.dir}header.html`);
+const footer = read(`src/partials/${lang.dir}footer.html`);
+if (lang.dir) mkdirSync(`${OUT}/${lang.dir}`, { recursive: true });
 for (const page of PAGES) {
-  const isPlaceholder = !existsSync(`src/pages/${page.file}`);
+  const isPlaceholder = !existsSync(`src/pages/${lang.dir}${page.file}`);
   // Production never contains placeholders: unbuilt pages are skipped and the folder is marked not ready.
   if (isPlaceholder && !PREVIEW) continue;
-  const src = isPlaceholder ? placeholder(page) : read(`src/pages/${page.file}`);
+  const src = isPlaceholder ? placeholder(page) : read(`src/pages/${lang.dir}${page.file}`);
   const meta = {};
   const front = src.match(/^<!--([\s\S]*?)-->/);
   for (const line of (front?.[1] ?? '').split('\n')) {
@@ -83,7 +90,8 @@ for (const page of PAGES) {
     if (m) meta[m[1]] = m[2];
   }
   const content = src.slice(front ? front[0].length : 0).trim();
-  const path = page.file === 'index.html' ? '/' : `/${page.file}`;
+  const pagePath = (dir) => `/${dir}${page.file === 'index.html' ? '' : page.file}`;
+  const path = pagePath(lang.dir);
   const nav = meta.nav ?? '';
   const pageHeader = nav ? header.replaceAll(`data-nav="${nav}"`, `data-nav="${nav}" aria-current="page"`) : header;
   const turnstile = TURNSTILE_SITE_KEY ? `<div class="cf-turnstile mb-4" data-sitekey="${TURNSTILE_SITE_KEY}"></div>` : '';
@@ -91,10 +99,10 @@ for (const page of PAGES) {
     ? '<p class="mb-4 rounded-lg bg-warn-bg p-3 text-body-sm text-warn-ink">The form is disabled on the preview. It will send messages once the site is live.</p>'
     : '';
 
-  const html = layout
+  let html = layout
     .replace('{{preview_banner}}', previewBanner)
     // 404 is served at any missing address (e.g. /a/b), so its relative links need a fixed base.
-    .replace('{{base}}', page.file === '404.html' ? `<base href="${PREVIEW ? '/cpapfit/' : '/'}">` : '')
+    .replace('{{base}}', page.file === '404.html' ? `<base href="${PREVIEW ? '/cpapfit/' : '/'}${lang.dir}">` : '')
     .replace('{{header}}', pageHeader)
     .replace('{{footer}}', footer)
     .replace('{{content}}', content)
@@ -106,10 +114,19 @@ for (const page of PAGES) {
     .replace('{{turnstile_script}}', TURNSTILE_SITE_KEY && content.includes('{{turnstile}}')
       ? '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>' : '')
     .replace('{{turnstile}}', turnstile)
-    .replace('{{form_note}}', formNote);
+    .replace('{{form_note}}', formNote)
+    .replace('{{lang}}', lang.html)
+    .replace('{{locale}}', lang.locale)
+    .replace('{{skip}}', lang.skip)
+    .replace('{{alternates}}', LANGS.map((l) => `<link rel="alternate" hreflang="${l.html}" href="${SITE_URL + pagePath(l.dir)}">`).join('\n'))
+    .replace('{{zh_href}}', `zh/${page.file}`)
+    .replace('{{en_href}}', `../${page.file}`);
+  // Pages in zh/ share the site's assets one folder up.
+  if (lang.dir) html = html.replace(/(src|href)="((?:img|css|js|fonts)\/|favicon|apple-touch-icon)/g, '$1="../$2');
 
-  writeFileSync(`${OUT}/${page.file}`, html);
+  writeFileSync(`${OUT}/${lang.dir}${page.file}`, html);
   if (meta.sitemap !== 'no' && meta.robots !== 'noindex') sitemap.push(SITE_URL + path);
+}
 }
 
 writeFileSync(`${OUT}/sitemap.xml`,
@@ -129,5 +146,5 @@ if (!PREVIEW && (missing.length || formWithoutHandler)) {
     'This file disappears once these are fixed.\n');
 }
 
-const built = PAGES.length - missing.length;
+const built = PAGES.length * LANGS.length - missing.length;
 console.log(`Built ${built} page(s)${missing.length ? (PREVIEW ? ` + ${missing.length} placeholder(s)` : `, ${missing.length} not built yet`) : ''}${!PREVIEW && (missing.length || formWithoutHandler) ? ' (NOT READY TO UPLOAD)' : ''} into ${OUT} (${PREVIEW ? 'preview' : 'production'}, assets v=${version})`);
