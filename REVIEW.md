@@ -10,7 +10,7 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | 3 | About OSA | `osa.html` | Approved (2026-11-18) | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
 | 5 | FAQ | `faq.html` | Approved (2026-11-18) | v1 |
-| 6 | Contact | `contact.html` | Not started | |
+| 6 | Contact | `contact.html` | Sent for review | v1 |
 | 7 | Privacy | `privacy.html` | Not started | |
 | 8 | Page not found | `404.html` | Not started | |
 
@@ -73,3 +73,12 @@ What changed from the old page, for context: all five questions and answers are 
 | Sophia B.'s quote | "equipment" | Typo fixed; the old site said "equicpment". **Approved 2026-11-18.** |
 
 What changed from the old page, for context: built from the approved content plan. "Loaner" is now "rental"; no trial length, fee or ADP mention. New "How it works" steps. All 9 quotes kept; long quotes show 4 lines with a "Read more" button. The 3 YouTube videos use YouTube's privacy-enhanced mode. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
+
+## 6. Contact: flagged items (v1)
+
+| Section | Item | Needs approval because |
+|---|---|---|
+| Send us a message | The whole contact form (Name, Email, Phone, Preferred location, Message) | New; the old site had no form. Messages will be emailed to the clinic once the site is live. On the preview the form does not send. |
+| Under the Send button | "Please don't include medical details or health card numbers in this form. We'll contact you to discuss your care." | New text, so patients don't send private health information by email. |
+
+What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page (live Google Maps, phone first, fax, email, Call clinic and Get directions). Name, Email and Message are required; Phone is optional. Stitch's invented lines ("accredited clinical fitting suites", "certified respiratory professionals will get back to you promptly") were left out.
