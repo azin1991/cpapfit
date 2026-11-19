@@ -6,10 +6,10 @@ On the preview, add `#review` to a page address to outline the flagged text belo
 | # | Page | File | Status | Version |
 |---|---|---|---|---|
 | 1 | Home | `index.html` | Approved (2026-11-02) | v1 |
-| 2 | Rental Trials + Testimonials | `trial.html` | Sent for review | v1 |
-| 3 | About OSA | `osa.html` | Sent for review | v2 |
+| 2 | Rental Trials + Testimonials | `trial.html` | Approved (2026-11-18) | v1 |
+| 3 | About OSA | `osa.html` | Approved (2026-11-18) | v2 |
 | 4 | Already Using CPAP? | `already_using.html` | Not started | |
-| 5 | FAQ | `faq.html` | Sent for review | v1 |
+| 5 | FAQ | `faq.html` | Approved (2026-11-18) | v1 |
 | 6 | Contact | `contact.html` | Not started | |
 | 7 | Privacy | `privacy.html` | Not started | |
 | 8 | Page not found | `404.html` | Not started | |
@@ -60,7 +60,7 @@ What changed from the old page, for context: all text is the original copy, word
 |---|---|---|
 | Why can't I just buy a CPAP mask online? | "advised that you rely" | Typo fixed; the old site said "advised that you to rely". **Approved 2026-11-18.** |
 | Why can't I make pressure changes…? | "meet with your sleep physician" | Typo fixed; the old site said "meet with you sleep physician". **Approved 2026-11-18.** |
-| Bottom | "Still have questions? Our CPAP educators are happy to help." box with both phone numbers and "Contact us" | New closing box, not on the old page. |
+| Bottom | "Still have questions? Our CPAP educators are happy to help." box with both phone numbers and "Contact us" | New closing box, not on the old page. **Approved 2026-11-18.** |
 
 What changed from the old page, for context: all five questions and answers are the original text, word for word apart from the two typo fixes. The first answer is open; the others open with a tap, one at a time (opening one closes the others). Answers slide open and closed, and the opened question scrolls smoothly to the top of the screen. Each question has a green three-bar button that turns into an X when open (design from Uiverse.io, chosen 2026-11-02). The pressure warning ("Don't try to change the pressure on your own…") is shown as a red warning box with a warning sign (wording unchanged; restyled 2026-11-02). Stitch's invented subtitle and badges ("Accredited Mask Fitting" etc.) were left out. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
 
@@ -68,7 +68,7 @@ What changed from the old page, for context: all five questions and answers are 
 
 | Section | Item | Needs approval because |
 |---|---|---|
-| Natalie H.'s quote | Sentence about a payment plan removed, marked with "…" | No payment plan is offered any more. |
+| Natalie H.'s quote | Sentence about a payment plan removed, marked with "…" | No payment plan is offered any more. **Approved 2026-11-18.** |
 | Natalie H.'s quote | "you're getting" | Typo fixed; the old site said "your getting". **Approved 2026-11-18.** |
 | Sophia B.'s quote | "equipment" | Typo fixed; the old site said "equicpment". **Approved 2026-11-18.** |
 
