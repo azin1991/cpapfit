@@ -85,7 +85,7 @@ What changed from the old page, for context: the header line "We accept walk in 
 
 | Section | Item | Needs approval because |
 |---|---|---|
-| Under the photo | "We offer PROFESSIONAL consultations to help you succeed." | This line was text inside the old picture; it is now real text under the photo (wording unchanged), so it can be translated. The photo was cropped to remove the text and the pink circle. |
+| Under the photo | "We offer PROFESSIONAL consultations to help you succeed." | This line was text inside the old picture; it is now real text under the photo (wording unchanged), so it can be translated. The photo was cropped to remove the line of text below it; the pink "Professional consultations" circle stays. |
 | Below the intro | Three highlights: "Use & care for your mask and machine" · "Discover your machine's features" · "Access your compliance data" | New short phrases taken from the intro text. |
 
 What changed from the old page, for context: the intro and "Struggling with your CPAP therapy?" text are the original copy, word for word. Added a "Book a consultation" box with both phone numbers and a "Contact us" button. Stitch's invented sections were left out ("What to bring to your consultation" checklist, "ADP Registered Specialists" and "Custom Mask Adjustments" badges, extra descriptions under the highlights).
