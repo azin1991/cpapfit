@@ -76,9 +76,6 @@ What changed from the old page, for context: built from the approved content pla
 
 ## 6. Contact: flagged items (v1)
 
-| Section | Item | Needs approval because |
-|---|---|---|
-| Send us a message | The whole contact form (Name, Email, Phone, Preferred location, Message) | New; the old site had no form. Messages will be emailed to the clinic once the site is live. On the preview the form does not send. |
-| Under the Send button | "Please don't include medical details or health card numbers in this form. We'll contact you to discuss your care." | New text, so patients don't send private health information by email. |
+No flagged items. A contact form was drafted and removed on 2026-11-18 until the manager decides whether the site should have one (it would need one small PHP file on Webnames; see git commit "Add Contact page (draft v1)" to restore it).
 
-What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page (live Google Maps, phone first, fax, email, Call clinic and Get directions). Name, Email and Message are required; Phone is optional. Stitch's invented lines ("accredited clinical fitting suites", "certified respiratory professionals will get back to you promptly") were left out.
+What changed from the old page, for context: the header line "We accept walk in consultations, but appointments are always appreciated." is the original text. Both location cards are the same as on the approved Home page (live Google Maps, phone first, fax, email, Call clinic and Get directions). Stitch's invented line "accredited clinical fitting suites" was left out.
