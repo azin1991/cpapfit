@@ -51,15 +51,14 @@
   .hero-slide { @apply absolute inset-0 opacity-0 transition-opacity duration-1000; }
   .hero-slide.is-active { @apply opacity-100; }
 
-  /* Locations: clinic phone number, shown first and larger.
-     Change the size here; it applies to both clinics. */
+  /* Locations: clinic phone number */
   .location-phone {
-    font-size: 1.75rem;   /* phone number size (1rem = 16px) */
+    font-size: 1.5rem;
     @apply font-heading font-semibold leading-tight text-primary-container no-underline hover:underline;
   }
   .location-phone-label { @apply self-center; }
 
-  /* Testimonial quote cards; long quotes (data-clamp) show 4 lines with a "Read more" button */
+  /* Testimonial quote cards */
   .quote-card { @apply card relative flex flex-col p-space-md pt-12; }
   .quote-card::before { content: '\201C'; @apply absolute left-5 top-1 font-heading text-[56px] leading-none text-brand-green; }
   .quote-card blockquote { @apply text-body-md text-on-surface; }
@@ -73,7 +72,7 @@
   /* Toggle: three green bars that turn into an X when the answer is open
      (adapted from Uiverse.io by vinodjangid07) */
   .faq-toggle {
-    --faq-toggle-size: 0.7;   /* toggle size: 1 = original 40px, 0.8 = 20% smaller (32px) */
+    --faq-toggle-size: 0.7;
     position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0;
     gap: calc(10px * var(--faq-toggle-size)); width: calc(40px * var(--faq-toggle-size)); height: calc(40px * var(--faq-toggle-size));
   }
