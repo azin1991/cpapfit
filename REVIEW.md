@@ -102,4 +102,4 @@ To see it on the preview, open any made-up address, e.g. https://azin1991.github
 
 | Section | Item | Needs approval because |
 |---|---|---|
-| Whole page | All text (What this website collects · Maps and videos · Email and phone · Questions) | New page; the old site had none. Written from what the new site actually does: no cookies, analytics or forms of its own; Google Maps on Home and Contact; YouTube (privacy-enhanced mode) on Rental Trials. Please have the clinic check it before launch, and update it if a contact form or analytics is added later. |
+| Whole page | All text (What this website collects · Maps and videos · Email and phone · Questions) | New page; the old site had none. Written from what the new site actually does: no cookies, analytics or forms of its own; Google Maps on Home and Contact; YouTube (privacy-enhanced mode) on Rental Trials. Please have the clinic check it before launch, and update it if a contact form or analytics is added later. **Approved 2026-11-18.** |
