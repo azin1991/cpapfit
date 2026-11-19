@@ -69,7 +69,7 @@ What changed from the old page, for context: all five questions and answers are 
 | Section | Item | Needs approval because |
 |---|---|---|
 | Natalie H.'s quote | Sentence about a payment plan removed, marked with "…" | No payment plan is offered any more. |
-| Natalie H.'s quote | "you're getting" | Typo fixed; the old site said "your getting". |
-| Sophia B.'s quote | "equipment" | Typo fixed; the old site said "equicpment". |
+| Natalie H.'s quote | "you're getting" | Typo fixed; the old site said "your getting". **Approved 2026-11-18.** |
+| Sophia B.'s quote | "equipment" | Typo fixed; the old site said "equicpment". **Approved 2026-11-18.** |
 
 What changed from the old page, for context: built from the approved content plan. "Loaner" is now "rental"; no trial length, fee or ADP mention. New "How it works" steps. All 9 quotes kept; long quotes show 4 lines with a "Read more" button. The 3 YouTube videos use YouTube's privacy-enhanced mode. The Contact page is not built yet, so "Contact us" opens a placeholder for now.
